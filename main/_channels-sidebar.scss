@@ -1,0 +1,37 @@
+// Text channels
+.icon-1DeIlz,
+.channelName-2YrOjO {
+  color: var(--channels-default);
+
+  @at-root {
+    // Channel hovering
+    .containerDefault--pIXnN:hover & {
+      color: var(--interactive-hover);
+    }
+
+    .modeMuted-onO3r- & {
+      color: var(--interactive-muted);
+    }
+
+    .modeSelected-346R90 & {
+      color: var(--interactive-active);
+    }
+
+    .modeUnread-1qO3K1 & {
+      color: var(--info-warning-foreground);
+    }
+  }
+}
+
+// Little unread pill on side
+.unread-2lAfLh {
+  background-color: var(--info-warning-foreground);
+}
+
+.containerDefault--pIXnN {
+  &:hover {
+    .unread-2lAfLh {
+      background-color: var(--interactive-active);
+    }
+  }
+}

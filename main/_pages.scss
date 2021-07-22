@@ -1,0 +1,65 @@
+#app-mount {
+  // Friend list
+  .peopleColumn-29fq28 {
+    background-color: var(--background-accent);
+  }
+
+  // Activity card
+  .itemCard-v9viV7 {
+    border: none;
+    box-shadow: 0 0 0 1px var(--background-secondary-alt);
+    transition: 200ms background-color;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+
+    &.active-1xchHY {
+      background-color: var(--background-modifier-selected);
+    }
+  }
+
+  // Server discovery
+  .pageWrapper-1PgVDX {
+    background-color: var(--background-accent);
+  }
+
+  // SERVER BOOSTING
+
+  // All selectors are in order of boosting page -> settings
+  // including union (e.g. tierUnlocked1, tierUnlocked2)
+
+  .perksModalContentWrapper-2HU6uL {
+    background-color: var(--background-accent);
+  }
+
+  .barBackground-2EEiLw {
+    background-color: var(--background-tertiary)
+  }
+
+  .background-3xPPFc {
+    color: var(--background-tertiary);
+  }
+
+  .tierInProgress-3mBoXq {
+    background-color: var(--background-tertiary);
+  }
+
+  .tierMarkerBackground-3q29am {
+    background-color: var(--background-secondary);
+  }
+
+  .tierHeaderLocked-1s2JJz,
+  .tierHeaderLocked-3S508x {
+    background-color: var(--background-secondary);
+  }
+
+  .tierBody-16Chc9,
+  .tierBody-3aUxuc {
+    background-color: var(--background-tertiary);
+  }
+
+  .perk-2WeBWW {
+    background-color: var(--background-secondary);
+  }
+}

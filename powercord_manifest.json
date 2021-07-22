@@ -1,0 +1,9 @@
+{
+  "name": "radium",
+  "description": "A simple dark theme with green tones here and there",
+  "version": "1.0.0",
+  "author": "mackenzie#0173",
+  "consent": false,
+  "theme": "support/radium.compiled.css",
+  "license": "MIT"
+}
