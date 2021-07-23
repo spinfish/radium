@@ -25,14 +25,9 @@
 @use 'main';
 @use 'extras';
 
-@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css');
-@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css');
-@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/pfps.css');
-@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/folders.css');
-@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/wordmark.css');
-
-#app-mount,
+:root,
 .theme-light {
+  --radium-color: 27, 225, 140; 
   --background-accent: rgb(18, 16, 16);
   --background-primary: var(--background-accent);
   --background-secondary: rgb(13, 12.5, 12.5);
@@ -41,13 +36,14 @@
   --background-floating: var(--background-tertiary);
 
   --background-modifier-hover: rgba(48, 225, 140, 0.1);
-  --background-modifier-active: rgba(27, 225, 140, 0.2);
+  --background-modifier-active: rgba(var(--radium-color), 0.2);
   --background-modifier-selected: var(--background-modifier-active);
 
-  --info-warning-foreground: rgb(27, 225, 140);
-  --info-warning-background: rgba(27, 225, 140, 0.2);
+  --info-warning-foreground: rgb(var(--radium-color));
+  --info-warning-background: rgba(var(--radium-color), 0.2);
 
   --channeltextarea-background: rgb(25, 22, 22);
+  --background-mentioned: rgba(var(--radium-color), 0.1);
 
   --text-link: rgb(115, 248, 197);
   --text-normal: rgb(255, 255, 255); 

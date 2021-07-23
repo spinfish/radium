@@ -1,0 +1,12 @@
+.anchor-3Z-8Bb, // Normal links
+.fakeLink-26oLcc, // Link in channel text area
+.colorLink-2vG20E, // E.g. Set a server nickname
+.colorLink-35jkBc { // E.g. Reset Nickname
+  text-shadow: 0 0 5px;
+}
+
+.mentioned-xhSam7 {
+  &::before {
+    box-shadow: 0 0 5px rgba(var(--radium-color));
+  }
+}

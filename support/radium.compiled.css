@@ -1,26 +1,4 @@
-/**
- * MIT License
- *
- * Copyright (c) 2021 spinfish
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+@import url("https://discordstyles.github.io/RadialStatus/base.css");
 @import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css");
 @import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css");
 @import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/pfps.css");
@@ -214,6 +192,14 @@
   --toast-border: var(--background-secondary-alt);
 }
 
+.reaction-1hd86g:not(.reactionMe-wv5HKu):hover {
+  border-color: rgba(var(--radium-color), 0.2);
+}
+.reaction-1hd86g.reactionMe-wv5HKu {
+  border-color: rgba(var(--radium-color), 0.05);
+  background-color: rgba(var(--radium-color), 0.15);
+}
+
 .thin-1ybCId::-webkit-scrollbar {
   width: 6px;
 }
@@ -274,6 +260,18 @@
   height: 32px !important;
 }
 
+.anchor-3Z-8Bb,
+.fakeLink-26oLcc,
+.colorLink-2vG20E,
+.colorLink-35jkBc {
+  text-shadow: 0 0 5px;
+}
+
+.mentioned-xhSam7::before {
+  -webkit-box-shadow: 0 0 5px rgba(var(--radium-color));
+          box-shadow: 0 0 5px rgba(var(--radium-color));
+}
+
 .role-2irmRk {
   border: none;
   position: relative;
@@ -311,8 +309,76 @@
   opacity: 0.25;
 }
 
-#app-mount,
+:root {
+  --rs-small-spacing: 2px;
+  --rs-medium-spacing: 3px;
+  --rs-large-spacing: 4px;
+  --rs-small-width: 2px;
+  --rs-medium-width: 3px;
+  --rs-large-width: 4px;
+  --rs-avatar-shape: 50%;
+  --rs-online-color: rgb(var(--radium-color));
+  --rs-idle-color: rgb(250, 166, 26);
+  --rs-dnd-color: rgb(240, 71, 71);
+  --rs-offline-color: rgb(99, 107, 117);
+  --rs-streaming-color: rgb(100, 61, 167);
+  --rs-invisible-color: rgb(116, 127, 141);
+  --rs-phone-color: var(--rs-online-color);
+  --rs-phone-visible: none;
+}
+
+.wrapper-3t9DeA > .svg-2V3M55 {
+  -webkit-filter: drop-shadow(0 0 1px var(--status-color));
+          filter: drop-shadow(0 0 1px var(--status-color));
+}
+.wrapper-3t9DeA[aria-label*="Do not disturb"] {
+  --status-color: var(--rs-dnd-color);
+}
+.wrapper-3t9DeA[aria-label*=Idle] {
+  --status-color: var(--rs-idle-color);
+}
+.wrapper-3t9DeA[aria-label*=Online] {
+  --status-color: var(--rs-online-color);
+}
+.wrapper-3t9DeA[aria-label*=Streaming] {
+  --status-color: var(--rs-streaming-color);
+}
+.wrapper-3t9DeA[aria-label*=Offline] {
+  --status-color: var(--rs-offline-color);
+}
+.wrapper-3t9DeA[aria-label*=Invisible] {
+  --status-color: var(--rs-invisible-color);
+}
+.wrapper-3t9DeA[aria-label*=Mobile] {
+  --status-color: var(--rs-phone-color);
+}
+
+/**
+ * MIT License
+ *
+ * Copyright (c) 2021 spinfish
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+:root,
 .theme-light {
+  --radium-color: 27, 225, 140;
   --background-accent: rgb(18, 16, 16);
   --background-primary: var(--background-accent);
   --background-secondary: rgb(13, 12.5, 12.5);
@@ -320,11 +386,12 @@
   --background-tertiary: var(--background-secondary-alt);
   --background-floating: var(--background-tertiary);
   --background-modifier-hover: rgba(48, 225, 140, 0.1);
-  --background-modifier-active: rgba(27, 225, 140, 0.2);
+  --background-modifier-active: rgba(var(--radium-color), 0.2);
   --background-modifier-selected: var(--background-modifier-active);
-  --info-warning-foreground: rgb(27, 225, 140);
-  --info-warning-background: rgba(27, 225, 140, 0.2);
+  --info-warning-foreground: rgb(var(--radium-color));
+  --info-warning-background: rgba(var(--radium-color), 0.2);
   --channeltextarea-background: rgb(25, 22, 22);
+  --background-mentioned: rgba(var(--radium-color), 0.1);
   --text-link: rgb(115, 248, 197);
   --text-normal: rgb(255, 255, 255);
   --text-muted: rgb(64, 64, 64);

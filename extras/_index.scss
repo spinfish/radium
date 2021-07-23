@@ -1,2 +1,11 @@
 @forward 'compact-emoji-settings';
+@forward 'glow-links-mentions';
 @forward 'nicer-roles';
+@forward 'statuses';
+
+@import url('https://discordstyles.github.io/RadialStatus/base.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/pfps.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/folders.css');
+@import url('https://Goose-Nest.github.io/GT-RevertRebrand/src/components/wordmark.css');
